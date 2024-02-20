@@ -1,0 +1,30 @@
+template <class Iterator>
+void sort (Iterator*arr,unsigned int size){
+    for (int i=0;i!=size;++i){
+        for (int j=0;j!=size;++j){
+            if(arr[j+1]<arr[j]) {
+               std::swap(arr[j+1],arr[j]);
+            }   }   }}
+int binary_search (int*arr, int size){
+    int middle=(size-1)/2;
+    int temp=0;
+    int i=0;
+    for(;i!=size;++i)
+  {temp+=arr[i];  }
+    return temp/size;
+     int key=temp;
+    int start =0;
+    int end=size-1;
+    while(start<end) {
+        if(arr[middle]==key){
+            return arr[middle];
+        }
+        if(arr[middle]<key) {
+            end=middle-1;
+      }
+        else{
+            start=middle+1;
+        }
+        return -1;
+    }
+}
